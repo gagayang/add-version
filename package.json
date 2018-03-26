@@ -1,0 +1,18 @@
+{
+  "name": "add-version",
+  "version": "0.0.3",
+  "description": "使用node把每一个jsp文件中的js、css、 增加版本号",
+  "author": "gaoyang@winchannel.net",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "dependencies": {
+    "cheerio" :"",
+    "yargs": "",
+    "replaceall": "",
+    "md5": ""
+  },
+  "devDependencies": {
+  }
+}
