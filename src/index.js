@@ -35,8 +35,10 @@ function getHtmlOrJspFileList(filePath, checkList, changeVersionList){
         var stats = fs.statSync(path.join(filePath, filename))
         if(stats.isFile()){
             const fileName = getdir(filename)
-            var contents = readFileSync(path.join(filePath, filename))
-            operatorAllFile(contents, path.join(filePath, filename), checkList, changeVersionList)
+            if (replaceFiles.indexOf(fileName) !== -1) {
+                var contents = readFileSync(path.join(filePath, filename))
+                operatorAllFile(contents, path.join(filePath, filename), checkList, changeVersionList)
+            }
         }else if(stats.isDirectory()) {
             getHtmlOrJspFileList(path.join(filePath, filename), checkList, changeVersionList)
         }
